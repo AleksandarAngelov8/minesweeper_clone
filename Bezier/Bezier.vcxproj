@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7d0ed218-67ca-4de7-b420-7bafce7367a8}</ProjectGuid>
+    <RootNamespace>Bezier</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MultiplayerOpenGLGame</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STB_IMAGE_IMPLEMENTATION;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src\vendor\imgui\backends;src\vendor\imgui;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\Irrklang\include;$(SolutionDir)Dependencies\GLFW\include;src;src\vendor</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\library;$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\Irrklang\lib\Winx64-visualStudio</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;irrKlang.lib;glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STB_IMAGE_IMPLEMENTATION;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src\vendor\imgui\backends;src\vendor\imgui;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\Irrklang\include;$(SolutionDir)Dependencies\GLFW\include;src;src\vendor</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\library;$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\Irrklang\lib\Winx64-visualStudio</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;irrKlang.lib;glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STB_IMAGE_IMPLEMENTATION;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src\vendor\imgui\backends;src\vendor\imgui;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\Irrklang\include;$(SolutionDir)Dependencies\GLFW\include;src;src\vendor</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\library;$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\Irrklang\lib\Winx64-visualStudio</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;irrKlang.lib;glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>STB_IMAGE_IMPLEMENTATION;GLEW_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>src\vendor\imgui\backends;src\vendor\imgui;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\Irrklang\include;$(SolutionDir)Dependencies\GLFW\include;src;src\vendor</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLEW\library;$(SolutionDir)Dependencies\GLFW\lib-vc2022;$(SolutionDir)Dependencies\Irrklang\lib\Winx64-visualStudio</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Ws2_32.lib;irrKlang.lib;glew32s.lib;glfw3.lib;opengl32.lib;User32.lib;Gdi32.lib;Shell32.lib</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Game\Multiplayer\Player.cpp" />
+    <ClCompile Include="src\OpenGL\RadialWipe.cpp" />
+    <ClCompile Include="src\Game\Multiplayer\AbilitySet.cpp" />
+    <ClCompile Include="src\Game\FloatingIndicator.cpp" />
+    <ClCompile Include="src\Game\Multiplayer\AbilityIcon.cpp" />
+    <ClCompile Include="src\Game\Multiplayer\Missile.cpp" />
+    <ClCompile Include="src\Game\Multiplayer\PlayerEnemy.cpp" />
+    <ClCompile Include="src\Game\Multiplayer\PlayerCharacter.cpp" />
+    <ClCompile Include="src\Game\Stats.cpp" />
+    <ClCompile Include="src\Button\ButtonLookup.cpp" />
+    <ClCompile Include="src\OpenGL\Cursor.cpp" />
+    <ClCompile Include="src\OpenGL\DialogBox.cpp" />
+    <ClCompile Include="src\Audio\Audio.cpp" />
+    <ClCompile Include="src\ImGuiFunctionality\ImGuiFunctionality.cpp" />
+    <ClCompile Include="src\Button\ButtonFunctionality.cpp" />
+    <ClCompile Include="src\Scene\MineField\MineField.cpp" />
+    <ClCompile Include="src\Scene\MultiplayerScenes\Arena.cpp" />
+    <ClCompile Include="src\Scene\NewMenu\NewMenu.cpp" />
+    <ClCompile Include="src\OpenGL\Resolution.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Button\Button.cpp" />
+    <ClCompile Include="src\OpenGL\IndexBuffer.cpp" />
+    <ClCompile Include="src\OpenGL\Mesh.cpp" />
+    <ClCompile Include="src\OpenGL\Pixels.cpp" />
+    <ClCompile Include="src\OpenGL\Renderer.cpp" />
+    <ClCompile Include="src\OpenGL\Shader.cpp" />
+    <ClCompile Include="src\OpenGL\Texture.cpp" />
+    <ClCompile Include="src\OpenGL\VertexArray.cpp" />
+    <ClCompile Include="src\OpenGL\VertexBuffer.cpp" />
+    <ClCompile Include="src\Server\Client.cpp" />
+    <ClCompile Include="src\Server\Server.cpp" />
+    <ClCompile Include="src\TextureInit\TextureInit.cpp" />
+    <ClCompile Include="src\vendor\imgui\backends\imgui_impl_glfw.cpp" />
+    <ClCompile Include="src\vendor\imgui\backends\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="src\OpenGL\Text.cpp" />
+    <ClCompile Include="src\OpenGL\TexturedRect.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="src\vendor\imgui\imgui_widgets.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\OpenGL\RadialWipe.h" />
+    <ClInclude Include="src\Game\Multiplayer\AbilitySet.h" />
+    <ClInclude Include="src\Game\FloatingIndicator.h" />
+    <ClInclude Include="src\Game\Multiplayer\AbilityIcon.h" />
+    <ClInclude Include="src\Game\Multiplayer\Missile.h" />
+    <ClInclude Include="src\Game\Multiplayer\Player.h" />
+    <ClInclude Include="src\Game\Multiplayer\PlayerEnemy.h" />
+    <ClInclude Include="src\Game\Multiplayer\PlayerCharacter.h" />
+    <ClInclude Include="src\Game\Stats.h" />
+    <ClInclude Include="src\Button\ButtonLookup.h" />
+    <ClInclude Include="src\OpenGL\Cursor.h" />
+    <ClInclude Include="src\OpenGL\DialogBox.h" />
+    <ClInclude Include="src\Audio\Audio.h" />
+    <ClInclude Include="src\ImGuiFunctionality\ImGuiFunctionality.h" />
+    <ClInclude Include="src\Button\ButtonFunctionality.h" />
+    <ClInclude Include="src\Scene\MineField\MineField.h" />
+    <ClInclude Include="src\Scene\MultiplayerScenes\Arena.h" />
+    <ClInclude Include="src\Scene\NewMenu\NewMenu.h" />
+    <ClInclude Include="src\OpenGL\Resolution.h" />
+    <ClInclude Include="src\Button\Button.h" />
+    <ClInclude Include="src\OpenGL\IndexBuffer.h" />
+    <ClInclude Include="src\OpenGL\Mesh.h" />
+    <ClInclude Include="src\OpenGL\Pixels.h" />
+    <ClInclude Include="src\OpenGL\Renderer.h" />
+    <ClInclude Include="src\OpenGL\Shader.h" />
+    <ClInclude Include="src\OpenGL\Texture.h" />
+    <ClInclude Include="src\OpenGL\VertexArray.h" />
+    <ClInclude Include="src\OpenGL\VertexBuffer.h" />
+    <ClInclude Include="src\OpenGL\VertexBufferLayout.h" />
+    <ClInclude Include="src\Scene\Scene.h" />
+    <ClInclude Include="src\Server\Client.h" />
+    <ClInclude Include="src\Server\Server.h" />
+    <ClInclude Include="src\TextureInit\TextureInit.h" />
+    <ClInclude Include="src\vendor\imgui\backends\imgui_impl_glfw.h" />
+    <ClInclude Include="src\vendor\imgui\backends\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\vendor\imgui\imconfig.h" />
+    <ClInclude Include="src\vendor\imgui\imgui.h" />
+    <ClInclude Include="src\vendor\imgui\imgui_impl_glfw_gl3.h" />
+    <ClInclude Include="src\vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="src\vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="src\vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="src\vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="src\vendor\imgui\stb_rect_pack.h" />
+    <ClInclude Include="src\vendor\imgui\stb_textedit.h" />
+    <ClInclude Include="src\vendor\imgui\stb_truetype.h" />
+    <ClInclude Include="src\OpenGL\Text.h" />
+    <ClInclude Include="src\OpenGL\TexturedRect.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
